@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.MenuFragment">
+
+    <Button
+        android:id="@+id/btnFrigorifico"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="112dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Frigorifico">
+
+    </Button>
+
+    <Button
+        android:id="@+id/btnCongelador"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="@+id/btnFrigorifico"
+        app:layout_constraintStart_toStartOf="@+id/btnFrigorifico"
+        app:layout_constraintTop_toBottomOf="@+id/btnFrigorifico"
+        android:text="Congelador"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

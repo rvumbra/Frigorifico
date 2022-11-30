@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuFragment">
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.rvumbra.frigorifico.ui.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_congeladorListFragment"
+            app:destination="@id/congeladorListFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_frigorificoListFragment"
+            app:destination="@id/frigorificoListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/congeladorListFragment"
+        android:name="com.rvumbra.frigorifico.ui.CongeladorListFragment"
+        android:label="fragment_congelador_list"
+        tools:layout="@layout/fragment_congelador_list" >
+        <action
+            android:id="@+id/action_congeladorListFragment_to_congeladorAddEditFragment"
+            app:destination="@id/congeladorAddEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/frigorificoListFragment"
+        android:name="com.rvumbra.frigorifico.ui.FrigorificoListFragment"
+        android:label="fragment_frigorifico_list"
+        tools:layout="@layout/fragment_frigorifico_list" />
+    <fragment
+        android:id="@+id/congeladorAddEditFragment"
+        android:name="com.rvumbra.frigorifico.ui.CongeladorAddEditFragment"
+        android:label="fragment_congelador_add_edit"
+        tools:layout="@layout/fragment_congelador_add_edit" >
+        <action
+            android:id="@+id/action_congeladorAddEditFragment_to_congeladorListFragment"
+            app:destination="@id/congeladorListFragment"
+            app:popUpTo="@id/nav_graph" />
+    </fragment>
+</navigation>
